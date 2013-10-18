@@ -14,7 +14,7 @@ class Fraccion
   end
   
   def to_s
-    puts "#{@num}/#{@den}"
+    "#{@num}/#{@den}"
   end
 
   def +(fraccion)
