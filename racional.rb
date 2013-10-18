@@ -11,7 +11,7 @@ class Fraccion
   def initialize (num, den)
     mcd = gcd(num, den)
     @num = num / mcd
-    @den = den / mcd 
+    @den = den / mcd
   end
   
   def to_s
@@ -20,6 +20,20 @@ class Fraccion
 
   def +(fraccion)
     num = @num * fraccion.den + fraccion.num * @den
+    den = @den * fraccion.den
+    resultado = Fraccion.new(num, den)
+    resultado.to_s
+  end
+
+  def -(fraccion)
+    num = @num * fraccion.den - fraccion.num * @den
+    den = @den * fraccion.den
+    resultado = Fraccion.new(num, den)
+    resultado.to_s
+  end
+
+  def *(fraccion)
+    num = @num * fraccion.num
     den = @den * fraccion.den
     resultado = Fraccion.new(num, den)
     resultado.to_s
