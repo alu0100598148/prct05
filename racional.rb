@@ -4,8 +4,7 @@
 require "./gcd.rb"
 
 class Fraccion
-  #@num
-  #@den
+
   attr_accessor :num, :den  
 
   def initialize (num, den)
@@ -35,6 +34,13 @@ class Fraccion
   def *(fraccion)
     num = @num * fraccion.num
     den = @den * fraccion.den
+    resultado = Fraccion.new(num, den)
+    resultado.to_s
+  end
+
+  def /(fraccion)
+    num = @num * fraccion.den
+    den = @den * fraccion.num
     resultado = Fraccion.new(num, den)
     resultado.to_s
   end

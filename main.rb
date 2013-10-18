@@ -12,4 +12,7 @@ puts "Resta: "
 num1 - num2
 
 puts "Multiplicacion: "
-num1*num2
+num1 * num2
+
+puts "Division: "
+num1 / num2
